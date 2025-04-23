@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-fy</title>
+    <link rel="stylesheet" href="cssmusicfy.css">
+    <link rel="icon" href="musiccartoonpng.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Lacquer&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+    display: flex;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+
+@keyframes feel {
+
+    50%{
+        transform:rotate(-1deg);
+
+    }
+
+    100%{
+        transform:rotate(1deg);
+    }
+    
+
+}
+
+@keyframes music-fy {
+    50%{
+        transform:rotate(10deg);
+
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }   
+
+    from{
+        margin-left:100%;
+        width:300%;
+    }
+
+    to{
+        margin-left: 0;
+        width:100%;
+    }
+    
+}
+
+
+nav{
+    position: fixed;
+    display: flex;
+    background-color: black;
+    color: white;
+    width:100%;
+    height: 60px;
+    padding: 15px;
+    margin-top: -10px;
+    margin-left: -8px;
+    margin-right: -8px;
+    z-index: 999;
+}
+
+nav div:hover{
+    color: green;
+    cursor: pointer;
+   
+}
+
+.icon{
+    margin-top:15px;
+    position: absolute;
+    margin-left:160px;
+    font-size: larger;
+
+}
+
+.music-fy{
+    margin-top:15px;
+    position: absolute;
+    margin-left:180px;
+    font-size: larger;
+
+}
+
+.log-in{
+    margin-top: 15px;
+    position: absolute;
+    right:150px;
+}
+
+.sign-up{
+    margin-top: 15px;
+    position: absolute;
+    right:210px;
+}
+
+.down-load{
+    margin-top: 15px;
+    position: absolute;
+    right:295px;
+}
+
+.no-div hr{
+    margin-top: 15px;
+    position: absolute;
+    right:275px;
+    height: 20px;
+}
+
+
+.support{
+    margin-top:15px;
+    position: absolute;
+    right:399px;
+}
+
+#premium{
+    margin-top:15px;
+    position: absolute;
+    right:480px;
+    width: fit-content;
+
+}
+
+#premium h2 p{
+    display: block;
+}
+
+.premium-drop{
+   margin-top:-5px;
+   position: absolute;
+   background-color:white;
+   border:1px solid green;
+   border-radius:25px;
+   width: 280px;
+   height: 400px;
+   margin-left:0;
+   gap:20px;
+   color:green;
+   display:none;
+   z-index: 999;
+}
+
+.pre-4{
+    position:absolute;
+    margin-top: 190px;
+}
+
+
+
+.pre-2{
+    position:absolute;
+    margin-top: 100px;
+}
+
+.pre-3{
+    position:absolute;
+    margin-top: 5px;
+}
+
+
+.pre-1:hover{
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    color:white;
+    background-color: green;
+    width:fit-content;
+
+}
+
+.pre-2:hover{
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    color:white;
+    background-color: green;
+    width:fit-content;
+
+}
+
+.pre-3:hover{
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    color:white;
+    background-color: green;
+    width:fit-content;
+
+}
+
+.pre-4:hover{
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    color:white;
+    background-color: green;
+    width:fit-content;
+
+}
+
+.pre-4:nth-child(2):hover{
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid green;
+    color:white;
+    background-color: white;
+    width:fit-content;
+
+}
+
+
+.move{
+    position: relative;
+    margin-left:10px;
+}
+
+
+#premium:hover .premium-drop{
+    display: block;
+    cursor: pointer;
+    
+}
+
+
+.premium-drop:hover:nth-child(4){
+    cursor: pointer;
+    border: 1px solid aqua;
+    width:200px;
+    border-radius: 20px;
+
+}
+
+.we-love{
+    position: absolute;
+    width:fit-content;
+    margin-left: 390px;
+    top:40px;
+    height:fit-content;
+    z-index: 999;
+    padding:8px;
+}
+
+.love-music{
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: green;
+    animation: music-fy 2s ease-in-out;
+} 
+
+.search{
+    position:fixed;
+    left:40px;
+    top:80px;
+    z-index: 999;
+    color:green;
+
+}
+
+.search-space{
+    position: absolute;
+    width:250px;
+    border: solid 2px green;
+    border-radius:20px;
+}
+
+
+.music-container{
+    background-image: url(musicbackgdark1.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top:88px;
+    height: 600px;
+    width: 100%;
+    left:0;
+    right: 0;
+}
+
+.music-loads{
+    animation: feel 2s ease infinite;
+
+}
+
+.pop-img{
+    position:absolute;
+    top:88px;
+    margin-left: 10px;
+
+}
+
+.silence{
+    position:absolute;
+    top:400px;
+    margin-left: 10px;
+    border:1px solid green;
+    color:green;
+    border-radius:25px;
+} 
+
+.awo-lowo{
+    position: inherit;
+    margin-left:335px;
+    top:25px;
+    animation: feel 2s ease infinite;
+}
+
+.fido-kapo{
+    position: absolute;
+    top:310px;
+    margin-left:-299px;
+    border:1px solid green;
+    border-radius:25px;
+    color:green;
+}
+
+.davido-feel{
+    position: absolute;
+    top:90px;
+    margin-left:590px;
+    animation: feel 2s ease infinite;
+
+}
+
+.davi-feel{
+    position: absolute;
+    top:310px;
+    margin-left:-300px;
+    border-radius:25px;
+   
+}
+
+.davido-assure{
+    position: absolute;
+    top:90px;
+    margin-left:1090px;
+    animation: feel 2s ease infinite;
+}
+
+.music-container2{
+    position: absolute;
+    background-color: blue;
+    top:587px;
+    height: 700px;
+    width: 100%;
+    left:0;
+    background-image: url(beatzbackg.img.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.sub-write{
+    position: absolute;
+    width:50%;
+    height:300px;
+    font-family: cursive;
+    animation: feel 2s ease infinite;
+    margin-left: 30px;
+    font-weight: bolder;
+    color: green;
+}
+
+.get-started{
+    position: absolute;
+    top:290px;
+    margin-left:70px;
+    padding:10px 15px 10px 15px;
+    background-color: green;
+    color: white;
+    border-radius:20px;
+}
+
+
+.get-started:hover{
+    background-color: white;
+    color: green;
+    cursor: pointer;
+
+}
+
+.view-sub{
+    position: absolute;
+    top:290px;
+    margin-left:190px;
+    padding:10px 15px 10px 15px;
+    background-color: white;
+    color: green;
+    border-radius:20px;
+}
+
+.view-sub:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-side2{
+    position: absolute;
+    width: 45%;
+    right: 20px;
+    top:100px;
+}
+
+.sub-write3{
+    font-family: "Bokor", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: green;
+    background-color: white;
+    border:1px solid green;
+    border-radius:15px 35px 10px 20px;
+    margin-left: 15px;
+}
+
+
+.music-container3{
+    position: absolute;
+    top:1086px;
+    width:100%;
+    height: 700px;
+    left:0;
+    right:0;
+    background-image: url(cassatte.img.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.music-box2{
+    position:absolute;
+    margin-left: 400px;
+    top:110px;
+}
+
+.music-box3{
+    position:absolute;
+    margin-left: 850px;
+    top:190px;
+}
+
+.card-info-div{
+    position: absolute;
+    top:1786px;
+    left:0;
+    right:0;
+    width:100%;
+    height:600px;
+}
+
+.card-details-div{
+    position: absolute;
+    top:20px;
+    margin-left:100px;
+}
+
+
+.card{
+    position:absolute;
+    top:190px;
+    margin-left:100px;
+    height: 300px;
+    background-color: lightslategray;
+    width:40%;
+    border: 1px solid grey;
+    border-radius:20px;
+}
+
+.card-icons{
+    position: absolute;
+    margin-left:450px;
+    font-size: 20px;
+}
+
+.hr4-div{
+    position: absolute;
+    top:140px;
+    width: 505px;
+    color:lightslategray;
+}
+
+.card-number-div{
+    position: absolute;
+    margin-left:40px;
+    top:60px;
+}
+
+.month-year-div{
+    position: absolute;
+    top:155px;
+    margin-left:40px;
+}
+
+.forward-slash{
+    position: absolute;
+    margin-left:35px;
+    top:35px;
+
+}
+
+.ze-ro{
+    position: absolute;
+    top: 35px;
+    margin-left:50px;
+    border-block-end: 2px solid lightgray;
+}
+
+.up-zero{
+    position: absolute;
+    margin-left:10px;
+    top:35px;
+    border-block-end: 2px solid lightgray;
+}
+
+.cvv-code-div{
+    position: absolute;
+    margin-left:400px;
+    top:160px;
+}
+
+.ex-te{
+    position:absolute;
+    top:35px;
+    border-block-end:2px solid lightgray;
+    border-block-end-width: 3px;
+    width: 90px;
+}
+
+.pers-info{
+    position: absolute;
+    margin-left: 700px;
+    top:-170px;
+    text-wrap: nowrap;
+}
+
+.first-name-div{
+    position: absolute;
+    margin-left: 690px;
+    top:-20px;
+
+}
+
+.first-name{
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+}
+
+.last-name-div{
+    position: absolute;
+    margin-left: 890px;
+    top:-20px;
+}
+
+.Last-name{
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+}
+
+.country-side{
+    position: absolute;
+    width: 75%;
+    margin-left: 695px;
+    top:50px;
+}
+
+.country{
+    position: absolute;
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+    width: 95%;
+
+}
+
+.countries{
+    position: absolute;
+    margin-left:225px;
+    top:15px;
+    border-collapse: collapse;
+    padding: 2px;
+    border:solid 2px green;
+    border-radius:20px;
+
+}
+
+
+.city{
+    position: absolute;
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+    width: 30%;
+    margin-left: 695px;
+    top:120px;
+}
+
+.zip-code{
+    position: absolute;
+    margin-left: 890px;
+    top:120px;
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+}
+
+.email{
+    position: absolute;
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+    width: 70%;
+    margin-left: 695px;
+    top:180px;
+}
+
+.phone{
+    position: absolute;
+    border:solid 2px green;
+    padding:15px;
+    border-radius:20px;
+    width: 70%;
+    margin-left: 695px;
+    top:240px;
+
+}
+
+.btn-pay{
+    position: absolute;
+    top:310px;
+    margin-left: 940px;
+    width: 150px;
+    padding: 10px;
+    border:solid 1px black;
+    color: white;
+    background-color: green;
+    border-radius:20px;
+}
+
+.btn-pay:hover{
+    background-color: white;
+    color: green;
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <nav>
+       <div class="icon"><i class='bx bxs-music'></i></div>
+       <div class="music-fy">Music-fy</div>
+
+       <div id="premium">Premium
+            <div class="premium-drop">
+                <div class="pre-1">
+                <h3 class="move">Premium Individual</h3></a> 
+                <p class="move">1 account- for one person</p>
+                </div>
+
+                <div class="pre-2">
+                    <h3 class="move">Premium Duo</h3>
+                    <p class="move">2 accounts-For couples under one roof</p>
+                </div>
+
+                <div class="pre-3">
+                    <h2 class="move">Premium Family</h2>
+                    <p class="move">1 account- for one person</p>
+                </div>
+
+                <div class="pre-4">
+                    <h2 class="move">Premium Student</h2>
+                    <p class="move">1 account- for one person</p>
+                </div>
+            </div>
+       </div>
+       
+       <div class="support">Support</div>
+       <div class="down-load">Download</div>
+       <div  class="no-div"><hr></div>
+       <div class="sign-up">Sign Up</div>
+       <div class="log-in">Login</div>
+    </nav>
+
+   
+
+    <div class="search">
+        <div class="input-search">
+            <i class='bx bxs-music'></i>Search<input class="search-space" type="text" placeholder="Search For A Song">
+        </div>
+    </div>
+
+    <div class="love-music-div">
+        <div class="we-love">
+            <h1 class="love-music">We all Love Music-fy.</h1>
+        </div>
+    </div>
+
+    <div class="music-container">
+        <div class="music-loads">
+            <img style="border-radius: 150px;" class="pop-img" src="popcaanForever.img" height="150px" width="150px">
+            <audio class="silence" src="Popcaan-Silence-(TrendyBeatz.com).mp3" controls></audio>
+            
+        </div>
+
+        <div class="awo-lowo">
+            <img style="border-radius: 150px;" class="fido-kapo-img" src="AwolowoRemixArtwork.jpg" height="150px" width="150px">
+            <audio class="fido-kapo" src="Fido-Ft-Kapo-Awolowo-Remix-(TrendyBeatz.com).mp3" controls></audio>
+            
+        </div>
+
+        <div class="davido-feel">
+            <img style="border-radius: 150px;" class="davido-feel-img" src="DavidoFeel.img" height="150px" width="150px">
+            <audio class="davi-feel" src="Davido-Feel-(TrendyBeatz.com).mp3" controls></audio>
+            
+        </div>
+
+        <div class="davido-assure">
+            <img style="border-radius: 150px;" class="davido-assure-img" src="DavidoAssuranceArtwork.jpg" height="150px" width="150px">
+            <audio class="davi-feel" src="Davido-Assurance-(TrendyBeatz.com).mp3" controls></audio>
+            
+        </div>
+    </div>
+    <div class="music-container2">
+        <div class="sub-side">
+            <h1 class="sub-write">Listen with zero limits.<br>Try 1 month of Premium Individual for #0.<br>
+                Only #1,100/month after.<br> Cancel anytime.</h1>
+
+                <button class="get-started">Get Started</button> <button title="Pocket-Friendly-Subs" class="view-sub">View Subscriptions</button>
+
+        </div>
+
+        <div class="sub-side2">
+            <h1 class="sub-write3">Music-Fy is where you come and listen to all kinds of Musical genre.
+                We have the best songs and we offer the best subscriptions that are pocket friendly.<br>
+                Rush Now!!! Don't Wait!!! <br>Start Listening.
+            </h1>
+
+        </div> 
+    </div>
+
+    <div class="music-container3">
+        <div class="music-box">
+            <div class="music-box1">
+                <img style="border-radius: 20px;" class="pop-img" src="Cincinnatiback.img" height="300px" width="300px">
+                <audio class="silence" src="Governor-Of-Africa-ft-Peruzzi-Cincinnati-[TrendyBeatz.com].mp3" controls></audio>
+                
+            </div>
+
+            <div class="music-box2">
+                <img style="border-radius: 20px;" class="pop-img" src="ZamorraArt.jpg" height="300px" width="300px">
+                <audio class="silence" src="Zamorra-Timeless-(TrendyBeatz.com).mp3" controls></audio>
+                
+            </div>
+
+            <div class="music-box3">
+                <img style="border-radius: 20px;" class="pop-img" src="OlamideIkigai.img" height="300px" width="300px">
+                <audio class="silence" src="Olamide-Metaverse-(TrendyBeatz.com).mp3" controls></audio>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="card-info-div" >
+        <div class="card-details-div">
+            <h1 class="card-details">Card Details</h1>
+            <p class="indicate">Indicate details of the card from which money will be debited from</p>
+
+        </div>
+
+        <div class="card">
+            <div class="card-icons">
+                <i class='bx bxl-visa'></i>
+                <i class='bx bxl-mastercard' style='color:#d25c0e'></i>
+            </div>
+
+            <div class="card-number-div">
+                <h2 class="card-number">Card Number</h2>
+                <p class="num-bers">0000 00000 0000</p>
+            </div>
+            <div class="hr4-div">
+                <hr>
+
+            </div>
+
+            <div class="month-year-div">
+                <div class="month-year">
+                    <p>Month and Year</p>
+                    <p class="up-zero">00</p>
+                    <p class="forward-slash">/</p> 
+                    <p class="ze-ro">00</p>
+
+                </div>
+            </div>
+
+            <div class="cvv-code-div">
+                <div class="cvv-code">
+                    <p class="cvv-c">CVV Code</p>
+                    <p class="ex-te">***</p>
+                </div>
+            </div>
+
+            <div class="info-details">
+                <div class="pers-info">
+                    <h1>Personal Information</h1>
+                </div>
+                <div class="first-name-div">
+                    <input class="first-name" type="text" placeholder="First Name">
+                </div>
+
+                <div class="last-name-div">
+                    <input class="Last-name" type="text" placeholder="Last Name">
+                </div>
+
+                <div class="country-side">
+                    <div class="country-div">
+                        <input class="country" type="text" placeholder="country">
+                            <select class="countries">
+                                <option value="">Choose Your Country:</option>
+                                <option value="">Nigeria</option>
+                                <option value="">Ghana</option>
+                                <option value="">Rwanda</option>
+                                <option value="">Botswana</option>
+                                <option value="">Zambia</option>
+                                <option value="">Gambia</option>
+                                <option value="">Mauritius</option>
+                                <option value="">Tanzania</option>
+                                <option value="">Kenya</option>
+                                <option value="">Uganda</option>
+                                <option value="">Cameroon</option>
+                                <option value="">Vietnam</option>
+                            </select>
+                    </div>
+                </div>
+
+                <div class="city-div">
+                    <input class="city" type="text" placeholder="City">
+
+                </div>
+
+                
+                    <div class="zip-div">
+                        <input class="zip-code" type="text" placeholder="Zipcode">
+
+                    </div>
+
+                    <div class="email-div">
+                        <input class="email" type="text" placeholder="Email">
+
+                    </div>
+
+                    <div class="phone-div">
+                        <input class="phone" type="text" placeholder="Phone Number">
+
+                    </div>
+
+                    <div class="button-div" >
+                        <button class="btn-pay" onclick="alert('You Have Paid.');">Pay</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
