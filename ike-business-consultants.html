@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ike Business Consultants</title>
+  <link rel="stylesheet" href="ike-business-consultants.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+  body{
+  background-color: lightgray;
+  display: flex;
+}
+
+
+
+nav{
+  position: fixed;
+  display: flex;
+  gap: 20px;
+  padding: 10px 15px;
+  font-weight: bolder;
+  font-size: 18px;
+  color:white;
+  background-color:blue;
+  height: 100px;
+  width:100%;
+  z-index: 999;
+  right: 0;
+  left: 0;
+  top:0;
+}
+
+nav a{
+  text-decoration: none;
+  color:white;
+}
+
+.nav-tent:hover{
+  color:lightskyblue;
+  cursor: pointer;
+}
+
+a:hover{
+  color:lightskyblue;
+  cursor: pointer;
+
+}
+
+.icon{
+  color: white;
+
+}
+
+.log-out{
+  margin-left:1111px;
+}
+
+.head-1{
+  margin-top: 190px;
+  width: 100%;
+  height: 890px;
+  right:0;
+  left:0;
+}
+
+.bus-head{
+  position: absolute;
+  margin-left: 170px;
+  font-size: 65px;
+  font-weight: bolder;
+  color:blue;
+}
+
+.sub-head-1{
+  margin-top: -50px;
+}
+
+.shape-1{
+  height: 150px;
+  background-color:blue;
+  width: 20%;
+  margin-left:810px;
+  border:solid blue;
+  border-radius: 0 0 0 500px;
+}
+
+.shape-2{
+  height: 150px;
+  background-color: lightskyblue;
+  width: 20%;
+  margin-top: -130px;
+  margin-left:450px;
+  border:solid lightskyblue;
+  border-radius: 400px 400px 0 400px;
+
+}
+
+.shape-3{
+  height: 150px;
+  background-color: lightskyblue;
+  width: 20%;
+  margin-top:15px;
+  margin-left:750px;
+  border:solid lightskyblue;
+  border-radius: 0 400px 0 400px;
+
+}
+
+.shape-4{
+  position: absolute;
+  height: 150px;
+  background-color: blue;
+  width: 150px;
+  border-radius: 75px;
+  margin-top:15px;
+  margin-top:-155px;
+  margin-left:550px;
+
+}
+
+.btn-con{
+  background-color: white;
+  color:blue;
+  border: solid 1px;
+  padding:15px 25px;
+  border-radius:25px;
+  font-weight: bold;
+  margin-top:230px;
+  margin-left:170px;
+}
+
+.btn-con:hover{
+  background-color: blue;
+  color:white;
+  cursor: pointer;
+}
+
+.stra-tegy-div{
+  margin-top: -145px;
+  margin-left: 20px;
+  height: 220px;
+  width:450px;
+  border:1px solid;
+  background-color: white;
+  color:blue;
+  border-radius: 20px;
+  transform: scale(1);
+}
+
+.stra-tegy-div:hover{
+  transform: scale(1.1);
+}
+
+
+
+.stra-tegy{
+  margin-left: 20px;
+}
+
+.stra-tegy-p{
+  margin-left: 20px;
+
+}
+
+.spn-stra-tegy{
+  height: 35px;
+  width: 100%;
+  border-radius:0 0 20px 20px;
+  color: blue;
+  background-color: white;
+}
+
+.read-more{
+  margin-left:170px;
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+  background-color: white;
+  height: 35px;
+  width: 100%;
+
+}
+
+.read-more:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+
+.spn-stra-tegy:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+} 
+
+.stra-tegy-div-2{
+  margin-top: -60px;
+  margin-left: 500px;
+  height: 235px;
+  width:450px;
+  border:1px solid;
+  background-color: white;
+  color:blue;
+  border-radius: 20px;
+  transform: scale(1);
+}
+
+.stra-tegy-div-2:hover{
+
+  transform: scale(1.1);
+}
+
+
+
+.stra-tegy-2{
+  margin-left: 20px;
+}
+
+.stra-tegy-p-2{
+  margin-left: 20px;
+
+}
+
+.book-now{
+  margin-left:170px;
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+  background-color: white;
+  height: 35px;
+  width: 100%;
+
+}
+
+
+.book-now:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+} 
+
+.spn-stra-tegy-2{
+  height: 35px;
+  width: 100%;
+  border-radius:0 0 20px 20px;
+  color: white;
+}
+
+
+
+.spn-stra-tegy-2:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+} 
+
+
+/* Mobile (phones) */
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Reduce gap between items */
+    padding: 15px; /* Increase padding for better tap targets */
+  }
+
+  .head-1 {
+    margin-top: 100px; /* Reduce top margin */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .bus-head {
+    margin-left: 20px; /* Reduce left margin */
+    font-size: 30px; /* Reduce font size */
+  }
+
+  .shape-1,
+  .shape-2,
+  .shape-3,
+  .shape-4 {
+    display: none; /* Hide shapes on mobile */
+  }
+
+  .btn-con {
+    margin-left: 20px; /* Reduce left margin */
+    width: 80%; /* Make button wider */
+  }
+
+  .stra-tegy-div,
+  .stra-tegy-div-2 {
+    width: 90%; /* Make divs wider */
+    margin: 20px auto; /* Center divs horizontally */
+    height: auto;
+    padding:auto;
+  }
+}
+
+/* Tablets/iPads */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .head-1 {
+    margin-top: 150px; /* Adjust top margin for tablets */
+  }
+
+  .bus-head {
+    margin-left: 50px; /* Adjust left margin for tablets */
+    font-size: 40px; /* Slightly increase font size */
+  }
+
+  .shape-1,
+  .shape-2,
+  .shape-3 {
+    display: none; /* Hide some shapes on tablets */
+  }
+
+  .shape-4 {
+    margin-left: 300px; /* Adjust shape position */
+  }
+
+  .btn-con {
+    margin-left: 50px; /* Adjust left margin */
+  }
+
+  .stra-tegy-div,
+  .stra-tegy-div-2 {
+    width: 400px; /* Adjust width for tablets */
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  /* Maintain original styles for desktops */ 
+}
+</style>
+
+<body>
+  <nav>
+    <div class="nav-tent"><a href="ike-business-consultants.html">Home</div></a>
+    <div class="nav-tent"><a href="our-services-ike-business-consultant.html">Our Services</div></a>
+    <div class="nav-tent"><a href ="contact-us-ike-business.html">Contact Us</div></a>
+    <div class="icon"> <i class='bx bx-user-circle' ></i></div>
+    <div class="log-out"><a href="ike-business-login.html">Log Out</div></a>
+  </nav>
+
+  <div class="head-1">
+
+    <div class="sub-head-1">
+      <h1 class="bus-head">Business Consultants <br> With a Growth Mindset </h1>
+      <button class="btn-con">Get a Free Consultation</button>
+    </div>
+
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="shape-3"></div>
+    <div class="shape-4"></div>
+
+    <div class="stra-tegy-div">
+       <h1 class="stra-tegy">Strategies for Success</h1>
+        <p class="stra-tegy-p">
+          Success is a multifaceted concept, often defined by personal achievements and fulfillment. Whether you're aiming for career advancement, personal growth, or financial independence, implementing effective strategies can significantly increase your chances of success.
+        </p>
+
+          <div class="spn-stra-tegy">
+            <a href="read-more-ike-business-consultant.html" class="read-more">Read More</a>
+          </div>      
+    </div>
+
+    <div class="stra-tegy-div-2">
+      <h1 class="stra-tegy-2">Optimizing Your Business: A Guide to Success</h1>
+        <p class="stra-tegy-p-2">
+          
+          Business optimization is the continuous process of improving efficiency, productivity, and profitability. It involves analyzing and refining your business processes, resources, and strategies to achieve better outcomes.
+        </p>
+
+          <div class="spn-stra-tegy-2">
+            <a href="" class="book-now">Book Now</a>
+          </div>     
+    </div>
+
+  </div>
+  
+</body>
+</html>

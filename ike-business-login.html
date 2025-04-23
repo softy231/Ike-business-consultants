@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ike-business-login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Lacquer&family=Montserrat:ital,wght@0,139;1,139&family=Yuji+Mai&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body{
+    align-items:center;
+    justify-content: center;
+    display:flex;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  
+  }
+
+  *{
+    overscroll-behavior: smooth;
+    overflow: hidden;
+  }
+ 
+ .log-in-div{
+  position: relative;
+  background-color:  blue;
+  color:white;
+  border-radius: 20px 155px 20px 115px;
+  height: 500px;
+  margin-left: -600px;
+  margin-top: 40px;
+  width:45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+form label{
+  margin-left:-100px ;
+  padding: 15px;
+  font-family:"Lacquer", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+form a{
+  list-style-type: none;
+  color:white;
+}
+
+.e-mail{
+  position: absolute;
+  margin-left: 50px;
+  margin-top:-40px;
+}
+
+.pass-word input{
+  position: absolute;
+  margin-left: -10px;
+  
+
+}
+
+
+input{
+  padding:8px;
+  border:1px solid black;
+  border-radius: 25px;
+  width:200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#btn{
+  margin-left: 60px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius:25px;
+  width:100px;
+  margin-top:50px;
+  font-family: "Bokor", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:blue;
+  color:white;
+}
+
+#btn:hover{
+  cursor: pointer;
+  
+}
+
+#btn a{
+  text-decoration: none;
+  
+}
+
+.log-in{
+  position: absolute;
+  margin-top:-440px;
+  margin-left: -120px;
+  width: fit-content;
+  font-family: "Bokor", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sub-head{
+  position: absolute;
+  margin-top: -375px;
+  margin-left: 10px;
+  font-family: "Bokor", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+
+
+.div-circle{
+  height: 200px;
+  width:200px;
+  border-radius:100px;
+  margin-top: 305px;
+  background-color:white;
+  margin-left:-795px;
+  z-index: 99; 
+}
+
+
+</style>
+<body>
+  <div class="log-in-div">
+    <h1 class="log-in">Log In</h1>
+    <h1 class="sub-head">Ike's Business Consultants&reg;</h1>
+    
+    <form>
+      <label class="e-mail">Email</label>
+      <input type="text" placeholder="Enter Your Email">
+
+      <label class="pass-word">Password</label>
+      <input id="pass-input" type="text" placeholder="Enter Your Password">
+      
+      <button id="btn"><a href="ike-business-consultants.html">Log In</a></button>
+
+      <p>Don't have an account yet? <a href="ike-business-sign-up.html">Sign Up Here.</a></p>
+
+    </form>
+  </div>
+  <div class="div-circle"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('pass-input');
+        if (passwordInput) {
+            passwordInput.type = 'password';
+        }
+    });
+</script>
+</body>
+</html>
